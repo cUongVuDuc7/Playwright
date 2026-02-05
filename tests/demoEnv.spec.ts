@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-test("env", async ({page}) => {
-    console.log(process.env.URL);
-})
+// test("env", async ({page}) => {
+//     console.log(process.env.URL);
+// })

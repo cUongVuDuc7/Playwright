@@ -5,9 +5,9 @@ import dotenv from 'dotenv'
  * https://github.com/motdotla/dotenv
  */
 // import path from 'path';
-dotenv.config({ 
-  path: `./env/.env.${process.env.ENV}`,
- });
+// dotenv.config({ 
+//   path: `./env/.env.${process.env.ENV}`,
+//  });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -40,10 +40,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-       {
-      name: 'iphone_15_pro',
-      use: { ...devices['iPhone 15 Pro Max'] },
-    },
+    // {
+    //   name: 'iphone_15_pro',
+    //   use: { ...devices['iPhone 15 Pro Max'] },
+    // },
 
     // {
     //   name: 'firefox',
@@ -77,9 +77,9 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  webServer: {
+    command: 'npm run start',
+    url: 'http://localhost:3000',
+    reuseExistingServer: !process.env.CI,
+  },
 });
